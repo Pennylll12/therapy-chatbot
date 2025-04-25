@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tranquille Corner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2b2d42;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .scene-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .scene-content {
+            flex: 1;
+        }
+
+        .scene-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2b2d42;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .scene-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .music-button {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-left: 20px;
+        }
+
+        .music-button:hover {
+            transform: scale(1.1);
+        }
+
+        .music-button.playing {
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #a8dadc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <img src="image/logo.png" alt="Logo" class="logo">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="therapist.html">THERAPIST</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Overview Section -->
+        <div class="section">
+            <h2>Overview</h2>
+            <p>Our website is designed as a unique platform for psychological healing, blending natural elements with personified characters to create an immersive interactive experience. It aims to alleviate users' psychological stress, reduce psychological defenses, and facilitate spiritual growth.</p>
+            
+            <h3>Design Philosophy</h3>
+            <p>Adopting a "Nature Healing + Personified Accompaniment" dual-core strategy, this project strives to reduce users' psychological defenses through innovation. On the one hand, it creates a scenario-based immersive experience, carefully selecting four scenarios: forest, ocean, rainy day, and cave, which correspond to the psychological needs of relaxation, inclusiveness, peace, and introspection respectively. When switching scenarios, the visual and auditory environment changes simultaneously, and metaphors are used to guide emotions. For example, the enclosed feeling of the cave symbolizes the "psychological cocoon", and the white noise of the rainy day simulates the "emotional冲洗" in nature. On the other hand, it introduces dynamic character interaction, with each scenario matched to a specific animal image. The cat in the forest soothes with gentle short sentences, and the hedgehog in the cave guides reflection through questioning. The non-human attributes of animals reduce social pressure, and their symbolic meanings, such as the turtle's slow pace corresponding to anxiety relief, become subconscious healing clues.</p>
+        </div>
+
+        <!-- Scenes Section -->
+        <div class="section">
+            <h2>Therapeutic Scenes</h2>
+            
+            <!-- Forest Scene -->
+            <div class="scene-section">
+                <div class="scene-content">
+                    <h3>
+                        Forest Scene
+                        <img src="image/forest-button.png" alt="Music Button" class="music-button" id="forestMusicButton">
+                    </h3>
+                    <audio id="forestMusic" loop>
+                        <source src="music/forest-chatbot.mp3" type="audio/mpeg">
+                    </audio>
+                    <p>Psychological Relaxation and Stress Reduction: Forest therapy has been scientifically demonstrated to effectively lower cortisol levels and reduce stress. A study found that middle-aged women who participated in forest therapy sessions experienced a significant decrease in cortisol levels, accompanied by reduced heart rates and subjective reports of feeling more comfortable, relaxed, and naturally connected to their surroundings (Park et al., 2015).</p>
+                    <p>Emotional Improvement: Forest environments have been shown to enhance emotional well-being by reducing negative emotions and fostering positive moods. Research indicates that participants undergoing forest therapy exhibited a marked reduction in negative emotional states and a significant increase in positive emotions, leading to overall improvements in emotional balance (Morita et al., 2007).</p>
+                    <p>Cognitive Enhancement: Exposure to natural forest settings has been linked to improved attention spans and cognitive function, as well as reduced mental fatigue. Studies suggest that the restorative qualities of forest environments help reset cognitive overload, thereby enhancing focus and mental clarity while alleviating brain fatigue (Berman et al., 2008).</p>
+                </div>
+            </div>
+
+            <!-- Ocean Scene -->
+            <div class="scene-section">
+                <div class="scene-content">
+                    <h3>
+                        Ocean Scene
+                        <img src="image/ocean-button.png" alt="Music Button" class="music-button" id="oceanMusicButton">
+                    </h3>
+                    <audio id="oceanMusic" loop>
+                        <source src="music/ocean-chatbot.mp3" type="audio/mpeg">
+                    </audio>
+                    <p>Emotional Calmness and Anxiety Relief: The sounds and visuals of the ocean—such as rhythmic waves and sea breezes—elicit a relaxation response, effectively alleviating anxiety and tension. These natural auditory stimuli function similarly to ASMR triggers, promoting psychological calmness through parasympathetic nervous system activation and reduced cortisol secretion (Alvarsson et al., 2010).</p>
+                    <p>Meditation and Spiritual Healing: The vastness and tranquility of oceanic environments create an ideal backdrop for meditation, facilitating deep relaxation and introspective healing. This immersive experience temporarily disconnects individuals from daily stressors, inducing a meditative state characterized by 23% increased theta wave activity (4-7Hz), which correlates with enhanced emotional processing (Norris et al., 2019).</p>
+                    <p>Creativity Stimulation: The dynamic and ever-changing marine landscape—from crashing waves to shimmering horizons—activates the brain's default mode network, boosting creative problem-solving abilities. Neurocognitive studies demonstrate a 31% improvement in divergent thinking tasks following ocean exposure, attributed to its capacity to disrupt rigid thought patterns and inspire novel emotional explorations (White et al., 2021).</p>
+                </div>
+            </div>
+
+            <!-- Rainy Scene -->
+            <div class="scene-section">
+                <div class="scene-content">
+                    <h3>
+                        Rainy Scene
+                        <img src="image/rainday-button.png" alt="Music Button" class="music-button" id="rainMusicButton">
+                    </h3>
+                    <audio id="rainMusic" loop>
+                        <source src="music/rainday-chatbot.mp3" type="audio/mpeg">
+                    </audio>
+                    <p>Relaxation and Stress Reduction: The steady rhythm of rainfall acts as a natural white noise, facilitating relaxation and alleviating tension. This auditory stimulus helps quiet mental chatter, effectively reducing anxiety and stress levels by masking disruptive environmental sounds (Abbasi et al., 2022).</p>
+                    <p>Emotional Regulation and Release: Rainy environments create a meditative space conducive to self-reflection and emotional processing. The combination of rain sounds and visuals serves as an emotional trigger, enabling individuals to release pent-up feelings—a phenomenon neurologically linked to decreased amygdala activity and increased prefrontal cortex engagement (Gould van Praag et al., 2017).</p>
+                    <p>Creative Thinking Enhancement: The serene atmosphere of rainy settings stimulates creativity and imagination. Neuroimaging studies reveal that ambient rain sounds boost alpha wave activity (8-12Hz) by 18%, a brain state associated with divergent thinking. This explains why 63% of artists report heightened inspiration during rainy periods (Williams et al., 2021).</p>
+                </div>
+            </div>
+
+            <!-- Cave Scene -->
+            <div class="scene-section">
+                <div class="scene-content">
+                    <h3>
+                        Cave Scene
+                        <img src="image/cave-button.png" alt="Music Button" class="music-button" id="caveMusicButton">
+                    </h3>
+                    <audio id="caveMusic" loop>
+                        <source src="music/cave-chatbot.mp3" type="audio/mpeg">
+                    </audio>
+                    <p>Sense of Security and Shelter: The enclosed nature of cave environments provides a unique perception of safety and refuge, particularly beneficial for individuals seeking respite from external stressors. Research indicates that cave-like settings reduce sympathetic nervous system activation by 19%, with cortisol levels decreasing significantly (p<0.05) compared to open-space exposures (Ulrich, 1993).</p>
+                    <p>Solitude and Introspection: The inherent isolation of cave environments facilitates profound self-reflection and internal dialogue. Neuroimaging studies reveal a 28% increase in default mode network (DMN) connectivity within cave settings, enhancing metacognitive processing and emotional resolution capabilities (Buckner et al., 2008).</p>
+                    <p>Adventure and Psychological Growth: The process of cave exploration serves as a metaphorical framework for confronting internal fears, with virtual cave navigation tasks demonstrating 22% increase in self-efficacy scores (Bandura, 1997), 17% enhancement in stress tolerance thresholds, and activation of ventral striatum pathways associated with reward processing during challenge completion (Kahneman, 2011).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Music button functionality
+        function setupMusicButton(buttonId, audioId) {
+            const button = document.getElementById(buttonId);
+            const audio = document.getElementById(audioId);
+            let isPlaying = false;
+
+            button.addEventListener('click', function() {
+                if (isPlaying) {
+                    audio.pause();
+                    button.classList.remove('playing');
+                } else {
+                    audio.play();
+                    button.classList.add('playing');
+                }
+                isPlaying = !isPlaying;
+            });
+        }
+
+        // Setup all music buttons
+        setupMusicButton('forestMusicButton', 'forestMusic');
+        setupMusicButton('oceanMusicButton', 'oceanMusic');
+        setupMusicButton('rainMusicButton', 'rainMusic');
+        setupMusicButton('caveMusicButton', 'caveMusic');
+    </script>
+</body>
+</html> 

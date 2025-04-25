@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Tranquille Corner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #a8dadc;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 50px 50px;
+        }
+
+        .scene {
+            margin-bottom: 50px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .scene h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .scene-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .scene-image {
+            position: relative;
+            width: 50%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .scene-image img {
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .scene-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .scene-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scene-image:hover .scene-overlay {
+            opacity: 1;
+        }
+
+        .scene-description {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+        }
+
+        .scene-image:hover .scene-description {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .video-container {
+            width: 50%;
+            position: relative;
+            padding-bottom: 28.125%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .scene-button {
+            display: block;
+            margin: 0 auto;
+            padding: 15px 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .scene-button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Scene specific colors */
+        .forest-scene {
+            background-color: #617750;
+        }
+
+        .ocean-scene {
+            background-color: #76A4B3;
+        }
+
+        .cave-scene {
+            background-color: #4C1E1A;
+        }
+
+        .rainy-scene {
+            background-color: #205064;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <img src="image/logo.png" alt="Logo" class="logo">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="therapist.html">THERAPIST</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <!-- Forest Scene -->
+        <div class="scene forest-scene">
+            <h2>Forest Scene</h2>
+            <div class="scene-content">
+                <div class="scene-image">
+                    <img src="image/forest.JPG" alt="Forest Scene">
+                    <div class="scene-overlay">
+                        <div class="scene-description">
+                            <p>Immerse yourself in the serene atmosphere of a peaceful forest, where the gentle rustling of leaves and birdsong create a perfect environment for reflection and healing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/xNN7iTA57jM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <button class="scene-button" onclick="window.location.href='forest.html'">Enter Forest</button>
+        </div>
+
+        <!-- Ocean Scene -->
+        <div class="scene ocean-scene">
+            <h2>Ocean Scene</h2>
+            <div class="scene-content">
+                <div class="scene-image">
+                    <img src="image/ocean.JPG" alt="Ocean Scene">
+                    <div class="scene-overlay">
+                        <div class="scene-description">
+                            <p>Experience the calming rhythm of ocean waves and the vastness of the sea, creating a space for deep relaxation and mental clarity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7z64k-fLAek" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <button class="scene-button" onclick="window.location.href='ocean.html'">Enter Ocean</button>
+        </div>
+
+        <!-- Cave Scene -->
+        <div class="scene cave-scene">
+            <h2>Cave Scene</h2>
+            <div class="scene-content">
+                <div class="scene-image">
+                    <img src="image/cave.JPG" alt="Cave Scene">
+                    <div class="scene-overlay">
+                        <div class="scene-description">
+                            <p>Discover inner peace in the quiet solitude of a cave, where the stillness allows for deep introspection and self-discovery.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/3cuB7gcCTio" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            frameborder="0"
+                            rel="0"
+                            modestbranding="1"
+                            controls="1">
+                    </iframe>
+                </div>
+            </div>
+            <button class="scene-button" onclick="window.location.href='cave.html'">Enter Cave</button>
+        </div>
+
+        <!-- Rainy Day Scene -->
+        <div class="scene rainy-scene">
+            <h2>Rainy Day Scene</h2>
+            <div class="scene-content">
+                <div class="scene-image">
+                    <img src="image/rainday.JPG" alt="Rainy Day Scene">
+                    <div class="scene-overlay">
+                        <div class="scene-description">
+                            <p>Find comfort in the gentle patter of rain, creating a cozy atmosphere perfect for reflection and emotional healing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/J4d-a7dVtiQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <button class="scene-button" onclick="window.location.href='rainday.html'">Enter Rainy Day</button>
+        </div>
+    </section>
+</body>
+</html> 

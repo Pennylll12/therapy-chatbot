@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapists - Tranquille Corner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #a8dadc;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            padding-top: 70px; /* Add padding to account for fixed navbar */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        .therapist-section {
+            margin-bottom: 80px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .therapist-section:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .therapist-section:nth-child(even) {
+            flex-direction: row;
+        }
+
+        .therapist-avatar {
+            width: 300px;
+            height: auto;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .therapist-info {
+            flex: 1;
+        }
+
+        .therapist-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .therapist-info p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .classes-section {
+            margin-top: 20px;
+        }
+
+        .classes-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .class-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .class-item h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .class-item p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* Individual therapist colors */
+        .miao-section {
+            background-color: #EBF4D9;
+            margin-left: 50px;
+        }
+
+        .olu-section {
+            background-color: #CEECED;
+            margin-right: 50px;
+        }
+
+        .haha-section {
+            background-color: #E2D3C3;
+            margin-left: 50px;
+        }
+
+        .woow-section {
+            background-color: #B1C292;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <img src="image/logo.png" alt="Logo" class="logo">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="therapist.html">THERAPIST</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Doctor Miao Section -->
+        <div class="therapist-section miao-section">
+            <img src="image/miao.png" alt="Doctor Miao" class="therapist-avatar">
+            <div class="therapist-info">
+                <h2>Doctor Miao - Forest Cat Lady 🐈🌲</h2>
+                <p>"Miao miao! I'm Doctor Miao, your forest cute friend and purring therapist!"</p>
+                <div class="classes-section">
+                    <h3>Doctor Miao's Healing Classes:</h3>
+                    <div class="class-item">
+                        <h4>Forest Meditation Walk</h4>
+                        <p>Stroll through the forest with me, listening to bird songs and feeling the breeze. The presence of my cat friends adds extra warmth and comfort.</p>
+                    </div>
+                    <div class="class-item">
+                        <h4>Catnip Relaxation Workshop</h4>
+                        <p>Create natural stress-relief items using fresh catnip and herbs from the forest.</p>
+                    </div>
+                    <div class="class-item">
+                        <h4>Tree Hug Therapy Session</h4>
+                        <p>Learn to embrace ancient trees and connect with their energy to release stress and negative emotions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor Olu Section -->
+        <div class="therapist-section olu-section">
+            <img src="image/olu.png" alt="Doctor Olu" class="therapist-avatar">
+            <div class="therapist-info">
+                <h2>Doctor Olu - Ocean Turtle Lady 🐢🌊</h2>
+                <p>"Hello! I'm Doctor Olu, your ocean decompression instructor, and I'll help you swim away from stress!"</p>
+                <div class="classes-section">
+                    <h3>Doctor Olu's Healing Classes:</h3>
+                    <div class="class-item">
+                        <h4>Ocean Wave Dance Session</h4>
+                        <p>Move with the rhythm of waves to release stress and tension.</p>
+                    </div>
+                    <div class="class-item">
+                        <h4>Coral Reef Color Therapy Workshop</h4>
+                        <p>Express emotions through vibrant coral-inspired art and explore the meanings behind the colors.</p>
+                    </div>
+                    <div class="class-item">
+                        <h4>Seashell Sound Journey Adventure</h4>
+                        <p>Listen to the ocean's echo in collected seashells and enter a state of deep relaxation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mr. Haha Section -->
+        <div class="therapist-section haha-section">
+            <img src="image/haha.png" alt="Mr. Haha" class="therapist-avatar">
+            <div class="therapist-info">
+                <h2>Mr. Haha - Hedgehog of the Cave 🦔🪄</h2>
+                <p>"Hello! I'm Mr. Haha, your cave humor therapist, and I've got jokes that can make even stones laugh!"</p>
+                <div class="classes-section">
+                    <h3>Mr. Haha's Healing Classes:</h3>
+                    <div class="class-item">
+                        <h4>Crystal Grotto Comedy Club</h4>
+                        <p>Stand-up comedy in the cave's natural amphitheater. The echoes amplify laughter for double the therapeutic effect.</p>
+                    </div>
+                    <div class="class-item">
+                        <h4>Funny Stone Carving Workshop</h4>
+                        <p>Carve your worries into funny stone statues and leave them in the cave to transform troubles into joy.</p>
+                    </div>
+                    <div class="class-item">
+                        <h4>Hedgehog Huddle Group Session</h4>
+                        <p>Share stories and release stress in a cozy circle, finding warmth and support in the group.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor Woow Section -->
+        <div class="therapist-section woow-section">
+            <img src="image/woow.png" alt="Doctor Woow" class="therapist-avatar">
+            <div class="therapist-info">
+                <h2>Doctor Woow - Rainy Day Owl Wise Guy 🦉🌧️</h2>
+                <p>"Hoot! I'm Doctor Woow, your rainy day wisdom guide, and I've got more wisdom than a wet owl!"</p>
+                <div class="classes-section">
+                    <h3>Doctor Woow's Healing Classes:</h3>
+                    <div class="class-item">
+                        <h4>Rain Rhythm Drumming Session</h4>
+                        <p>Use rain sounds as your beat inspiration for therapeutic drumming to release emotional tension.</p>
+                    </div>
+                    <div class="class-item">
+                        <h4>Storm-Cloud Art Workshop</h4>
+                        <p>Transform worries into beautiful storm-inspired paintings, turning emotional turbulence into artistic expression.</p>
+                    </div>
+                    <div class="class-item">
+                        <h4>Mud Puddle Play Adventure</h4>
+                        <p>Reconnect with childlike joy by playing in mud puddles, symbolically washing away adult stresses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
